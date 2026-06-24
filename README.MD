@@ -1,1 +1,1 @@
-Created using Visual Studio Code. ALL RIGHTS RECIEVED VESELIN HADZHISTEFANOV
+Test scenarios for a collection of problems on Leetcode.com
