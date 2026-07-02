@@ -9,25 +9,17 @@
  * @return {ListNode}
  */
 
-// Test data
-
-class LinkedListValue {
-  constructor(value, next) {
-    this.value = (value === undefined ? 0 : value);
-    this.next = (next === undefined ? null : next);
-  }
-}
-
 class LinkedList {
-  Node = class {
+  static Node = class {
     constructor(value, next) {
       this.value = value ?? 0;
       this.next = next ?? null;
     }
   }
 
-  constructor(s) {
-    this.start = s
+  constructor() {
+    this.start = null;
+    this.tail = null;
   }
 
   get = function () {
@@ -46,19 +38,49 @@ class LinkedList {
     return num;
   }
 
-  put = function () {
+  put = function (n) {
+    if (this.start === null) {
+      this.start = n;
+      this.tail = n;
+    } else {
+      this.tail.next = n;
+      this.tail = n;
+    }
+  }
+
+  replace = function () {
     return 0;
   }
 
-  add = function () {
+  add = function (n) {
     return 0;
   }
 }
 
-// Leetcode test function
+// Leetcode
 var addTwoNumbers = function (l1, l2) {
   let n1 = l1.get();
   let n2 = l2.get();
 
   return n1 + n2;
 };
+
+// Test
+var n1 = new LinkedList.Node(5, null);
+//console.log(n1.value);
+
+var l1 = new LinkedList();
+l1.put(n1);
+l1.put(new LinkedList.Node(7));
+l1.put(new LinkedList.Node(3));
+
+var l2 = new LinkedList();
+l2.put(new LinkedList.Node(5));
+l2.put(new LinkedList.Node(5));
+l2.put(new LinkedList.Node(6));
+
+console.log(l1.get());
+console.log(l2.get());
+console.log(addTwoNumbers(l1, l2));
+
+//console.log(addTwoNumbers(list, list))

@@ -1,1 +1,1 @@
-Test scenarios for a collection of problems on Leetcode.com
+A collection of solutions to leetcode challenges.
