@@ -1,1 +1,1 @@
-A collection of solutions to leetcode challenges.
+A selection of leetcode challenge solutions.
